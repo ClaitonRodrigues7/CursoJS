@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indentificar sua nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Massa</h1>
+    Digite seu país atual:<input type="text" id="pais" name="pais"> 
+    <input type="button" value="Verificar" onclick="ide()">
+    <div id="res">
+
+    </div>
+    <script>
+        function ide() {
+            var nac = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            
+            res.innerHTML = `Seu pais é ${nac.value}`
+
+            if (nac.value == "Brasil"){
+               
+                res.innerHTML = `Você é brasileiro`
+            }else {
+               
+                res.innerHTML = `Você é estrangeiro`
+            }
+           
+            
+        }
+    </script>
+</body>
+</html>
